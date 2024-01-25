@@ -1,0 +1,37 @@
+.cardContainer {
+  width: 20rem;
+  min-height: 15rem;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  margin: 1rem;
+  background-color: #ccd5ae;
+  color: #414928;
+  border-radius: 10px;
+}
+
+.title,
+.subtitle,
+.content {
+  max-width: 19rem;
+}
+
+.title {
+  font-size: 1.5rem;
+}
+
+.subtitle {
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.2rem;
+  border-bottom: solid 1px #414928;
+}
+
+.showButton {
+  width: fit-content;
+  margin-top: 1rem;
+  border: none;
+  border-radius: 5px;
+  background-color: transparent;
+  cursor: pointer;
+}

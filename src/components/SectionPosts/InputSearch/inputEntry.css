@@ -1,0 +1,20 @@
+.input-div {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  border: none;
+  border-bottom: 1px solid #d4a373;
+  margin-bottom: 10px;
+  background-color: #faedcd;
+}
+
+input:focus {
+  outline: none !important;
+}
+
+label {
+  font-size: 0.8rem;
+  color: #d4a373;
+}
