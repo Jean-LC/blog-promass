@@ -4,7 +4,7 @@ import { BlogEntry } from "../../../interface";
 import NewEntry from "./NewEntry";
 import "./sectionPosts.css";
 import axios from "axios";
-import InputSearch from "./InputSearch";
+import InputEntry from "./NewEntry/InputEntry";
 
 export default function SectionPosts() {
   const [entries, setEntries] = useState<BlogEntry[]>([]);
@@ -59,7 +59,7 @@ export default function SectionPosts() {
             <button className="buttonNew" onClick={() => setOpenNewEntry(true)}>
               Nueva entrada
             </button>
-            <InputSearch
+            <InputEntry
               label={"Buscar"}
               handleChange={handleChangeSearch}
               name={"search"}

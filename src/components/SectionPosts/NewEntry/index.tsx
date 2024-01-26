@@ -10,6 +10,7 @@ interface Props {
 }
 
 export default function NewEntry({ close, updateEntries }: Props) {
+  const [load, setLoad] = useState(false);
   const [data, setData] = useState<SaveBlogEntry>({
     title: "",
     author: "",
@@ -28,10 +29,12 @@ export default function NewEntry({ close, updateEntries }: Props) {
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
+    setLoad(true);
     const response = await axios.post(
       "https://65b1952ed16d31d11bdf0ef1.mockapi.io/blog/blogEntries",
       data
     );
+    setLoad(false);
     updateEntries(response.data);
     close();
   };
@@ -57,10 +60,15 @@ export default function NewEntry({ close, updateEntries }: Props) {
           />
 
           <div className="buttons-div">
-            <button className="cancel-btn" type="button" onClick={close}>
+            <button
+              className="cancel-btn"
+              type="button"
+              onClick={close}
+              disabled={load}
+            >
               cancelar
             </button>
-            <button className="submit-btn" type="submit">
+            <button className="submit-btn" type="submit" disabled={load}>
               aceptar
             </button>
           </div>
