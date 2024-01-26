@@ -1,16 +1,19 @@
-# Getting Started with Create React App
+# Blog con React
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Para iniciar el proyecto
 
-## Available Scripts
+```bash
+npm install
+```
 
-In the project directory, you can run:
+## Para ejecutar el proyecto
 
-### `npm start`
+```bash
+npm start
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+En el navegador entrar a [localhost](http://localhost:3000) o el servidor elegido en el equipo
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Sobre el proyecto
 
+Es una plataforma de blog eficiente desarrollada con el uso de React, Next.js y Axios. Cuenta con un diseño responsivo y aprovecha la gestion de estados dinamicos con React.
